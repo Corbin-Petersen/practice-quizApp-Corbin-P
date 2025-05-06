@@ -54,7 +54,11 @@ for (button of answerButtons) {
 //Function to display next question
 function nextQuestion() {
      index++;
+     if (index >= questions.length) {
+          index = 0;
+     }
      displayQuestion();
+     quizFeedback.textContent = "Please select from the answers above";
 }
 
 //click event that triggers nextQuestion()
