@@ -31,6 +31,7 @@ function displayQuestion() {
           } else {
                answer.removeAttribute("id");
           }
+          answer.disabled = false;
           answerIndex++;
      }
 }
@@ -43,6 +44,9 @@ function handleAnswerSelection(event){
           quizFeedback.textContent = "CORRECT!"
      } else {
           quizFeedback.textContent = "Oops! Wrong answer."
+     }
+     for (button of answerButtons) {
+          button.disabled = true;
      }
 }
 
